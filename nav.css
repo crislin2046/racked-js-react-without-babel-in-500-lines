@@ -1,0 +1,18 @@
+header {
+  width: 100%;
+}
+nav {
+  background: white;
+}
+nav.horizontal ul {
+  list-style-type: none;
+  padding: 1px 0 3px;
+}
+nav.horizontal ul li {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+nav.horizontal ul li > a {
+  font-family: var(--title-font);
+  font-size: 120%;
+}

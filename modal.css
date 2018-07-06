@@ -1,0 +1,43 @@
+@import url('/style.css');
+:root {
+  position: relative;
+  background: linear-gradient(var(--key-1-alpha), var(--key-2-alpha));
+}
+body {
+  margin: 0;
+  background: transparent;
+}
+.modal {
+  word-break: break-word;
+  font-family: Times, serif;
+  display: table;
+  width: 80%;
+  max-width: 555px;
+  position: relative;
+  z-index:100000000;
+  min-width: 100px;
+  min-height: 100px;
+  margin: 5rem auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.long {
+  word-break: break-all;
+  display: inline-block;
+}
+.important {
+  font-weight: bold;
+}
+.transparent {
+  opacity: 0;
+}
+.result {
+  color: green;
+  font-weight: bold;
+}
+.fail {
+  color: red;
+}
+.bonus strong {
+  color: green;
+}

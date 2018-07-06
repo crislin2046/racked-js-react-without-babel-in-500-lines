@@ -1,0 +1,24 @@
+  :root {
+    min-height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: yellow;
+  }
+  body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    /**
+      perspective: 800px;
+      transform-origin: center center;
+    **/
+  }
+  main {
+    height: 100%;
+    font-size: 0;
+  }
+  .panel {
+    font-size: 10vw;
+    text-align: center;
+    font-family: Garamond, Georgia, Helvetica, Arial, sans-serif;
+  }

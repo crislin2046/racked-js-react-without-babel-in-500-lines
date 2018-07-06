@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset=utf8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Application</title>
+<link rel=stylesheet href=/style.css>
+<style>
+  iframe#modals_frame {
+    z-index:20000000;
+    background-color: transparent;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 0;
+    width:100%;
+    height:100vh;
+    overflow: scroll;
+  }
+  iframe {
+    border: 0;
+    display: block;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>  
+<iframe id=modals_frame name=modals src=transparent.html></iframe>
+<main class=app>
+  <form method=POST action=/flow/test target=modals>
+    <fieldset><legend>Application</legend>
+      <p>
+        <button autofocus name=action value=do_something>Do Something</button>
+    </fieldset>
+  </form>
+</main>

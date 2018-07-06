@@ -1,0 +1,112 @@
+  :root {
+    min-height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: yellow;
+  }
+  body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    /**
+      perspective: 800px;
+      transform-origin: center center;
+    **/
+  }
+  main {
+    height: 100%;
+    font-size: 0;
+  }
+  main.upshot {
+    position: absolute;
+    top: -15vw;
+    z-index: 1;
+  }
+  .star {
+    position: relative;
+    display: inline-block;
+    width: calc(20vw - 18px/5);
+    height: calc(20vw - 18px/5);
+    box-size: border-box;
+    /**
+      margin: 0 auto;
+      top: 50%;
+      transform: translate(0,-50%);
+    **/
+  }
+  .quadrant {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .petal {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .quadrant:nth-of-type(1) .petal {
+    background: linear-gradient(fuchsia, dodgerblue 30%);
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0);
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
+    transform-origin: 0px 0px;
+  }
+  .quadrant:nth-of-type(2) .petal {
+    background: linear-gradient(to right, mediumspringgreen, cyan 30%);
+    -webkit-clip-path: polygon(50% 50%, 0 0, 0 100%);
+    clip-path: polygon(50% 50%, 0 0, 0 100%);
+    transform-origin: 0px 0px;
+  }
+  .quadrant:nth-of-type(3) .petal {
+    background: linear-gradient(to top, fuchsia, dodgerblue 30%);
+    -webkit-clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+    transform-origin: 0px 100%;
+  }
+  .quadrant:nth-of-type(4) .petal {
+    background: linear-gradient(to left, mediumspringgreen, cyan 30%);
+    -webkit-clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+    transform-origin: 100% 0px;
+  }
+  .star:focus .quadrant:nth-of-type(2n) .petal {
+    transform: rotate3d(0,1,0,180deg); 
+  }
+  .star:focus .quadrant:nth-of-type(2n+1) .petal {
+    transform: rotate3d(1,0,0,180deg); 
+  }
+  .star:not(:focus) .petal {
+    transition: transform 0.25s linear;
+  }
+  .star:focus .petal {
+    transition: transform 0.25s linear;
+  }
+  .star:focus {
+    z-index: 2;
+  }
+  .star:hover .quadrant:nth-of-type(2n) .petal {
+    transform: rotate3d(0,1,0,180deg); 
+  }
+  .star:hover .quadrant:nth-of-type(2n+1) .petal {
+    transform: rotate3d(1,0,0,180deg); 
+  }
+  .star:not(:hover) .petal {
+    transition: transform 0.25s linear;
+  }
+  .star:hover .petal {
+    transition: transform 0.25s linear;
+  }
+  .star:hover {
+    z-index: 2;
+  }
+  .star:focus {
+    outline: none;
+  }
+  .panel {
+    font-size: 10vw;
+    text-align: center;
+    font-family: Garamond, Georgia, Helvetica, Arial, sans-serif;
+  }
